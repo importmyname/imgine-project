@@ -1,3 +1,23 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scroll-track {
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgb(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thunmb {
+    background-color: rgb(69, 162, 158 ,0.2 );
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thunmb:hover {
+    background-color: rgb(69, 162, 158 ,0.6 ) ;
+    cursor: pointer;
+}
+
 body {
     background-color: #e6e6e6;
 }
@@ -10,15 +30,28 @@ body {
     top: 0 ;
     left: 0 ;
     position: fixed;
+    overflow-x: hidden ;
+    overflow-y: auto;
+    transition: all 0.8s ease;
 }
 
 .page .content {
     margin-left: 250px;
+    transition: all 0.8s ease;
 
 }
 
+body.active .page .sidebar {
+    left: -250px;
+}
+
+body.active .page .content {
+    margin-left: 0;
+    width: 100%;
+}
+
 .sidebar-header {
-    padding: 10px 15px;
+    padding: 10px 25px 10px 15px;
 }
 
 .sidebar-logo-container {
@@ -103,4 +136,38 @@ body {
 }
 .navigation-list-item.active .navigation-link {
     color: rgb(225, 225, 255, 0.8);
+}
+
+.navigation-link i {
+    font-size: 18px;
+}
+
+.navigationBar {
+    background-color: white;
+    height: 50px;
+    padding: 38px 0px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 2px -2px #c5c6c7;
+}
+
+.sidebarToggle {
+    font-size: 16px;
+    background-color:#c5c6c7 ;
+    color: rgb(0, 0, 0, 0.8);
+    margin-left: -19px;
+    z-index: 999;
+    border-radius: 50px;
+    outline: none !important;
+    box-shadow: none !important;
+
+}
+
+.sidebarToggle:hover {
+    color:white ;
+}
+
+.sidebarToggle.active {
+    margin-left: 10px;
+
 }

@@ -41,3 +41,66 @@ body {
     height: auto;
 }
 
+.brand-name-container {
+    padding: 0px;
+    margin: 10px 10px 0px 2px;
+
+}
+
+.brand-name {
+    color: white ;
+    margin: 0;
+    line-height:  1.1rem;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-family: "Roboto" , "sans-serif";
+    font-weight: 600;
+}
+
+.brand-subname {
+    font-weight: 300;
+    font-size: 14px;
+
+}
+
+.navigation-list {
+    list-style-type: none;
+    padding: 0px 20px;
+    margin-top: 20px;
+}
+
+.navigation-list-item {
+    /* background-color: red; */
+    padding: 10px 18px 10px 18px;
+    border-radius: 8px;
+    margin: 15px 0px;
+}
+
+.navigation-list-item:hover {
+    background: rgb(0, 0, 0, 0.1);
+    box-shadow: 0 0 0.4em rgb(225, 225, 255, 0.1);
+    cursor: pointer;
+}
+
+.navigation-list-item.active {
+    background: rgb(0, 0, 0, 0.1);
+    box-shadow: 0 0 0.4em rgb(225, 225, 255, 0.1);
+
+}
+
+.navigation-link {
+    color:rgb(31, 40, 51, 0.8) ;
+    letter-spacing: 0.5px ;
+    font-family: "Roboto" , "sqan-serif";
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.navigation-list-item .navigation-link:hover {
+    color: rgb(225, 225, 255, 0.7);
+
+}
+.navigation-list-item.active .navigation-link {
+    color: rgb(225, 225, 255, 0.8);
+}

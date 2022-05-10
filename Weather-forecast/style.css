@@ -45,6 +45,8 @@ background-color: blue;
 
 .underright {
     background-color: aliceblue;
+    height: 75%;
+    padding: 10px;
 }
 
 .undercenter{

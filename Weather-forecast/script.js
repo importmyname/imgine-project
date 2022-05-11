@@ -22,7 +22,24 @@ let weather = {
       const { temp, humidity } = data.main;
       const { speed } = data.wind;
       const { temp_min, temp_max } = data.main
-      const { sunrise, sunset} = data.sys
+      const { pressure } = data.main
+      const { sunrise } = data.sys
+      const { sunset } = data.sys
+      const { country } = data.sys
+    //   let a = new Date(sunrise);
+    //   let sunr = a.toLocaleTimeString(country)
+      let sunr =() => {
+          let a = new Date() ;
+          let b = a.toLocaleTimeString(country);
+          return a
+      }
+      let suns =() => {
+        let c = new Date() ;
+        let d= c.toLocaleTimeString(country);
+        return c
+    }
+
+ 
 
       document.querySelector(".city").innerText = "Weather in " + name;
       document.querySelector(".icon").src =
@@ -37,6 +54,8 @@ let weather = {
         "Min: " + temp_min + "°C" ;
       document.querySelector(".temp_max").innerText = 
         "Max: " + temp_max + "°C" ;
+        document.querySelector(".pressure").innerText = 
+        "pressure: " + pressure + " hPa" ;
         document.querySelector(".sunrise").innerText = 
         "sunrise: " + sunrise ;
         document.querySelector(".sunset").innerText = 
@@ -51,6 +70,7 @@ let weather = {
     },
   };
   
+
   document.querySelector(".search button").addEventListener("click", function () {
     weather.search();
   });
@@ -63,4 +83,5 @@ let weather = {
       }
     });
   
-  weather.fetchWeather("Denver");
+  weather.fetchWeather("Bangkok");
+

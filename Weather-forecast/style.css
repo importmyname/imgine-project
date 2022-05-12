@@ -5,25 +5,25 @@
 }
 
 .main {
-position: absolute;
+/* position: absolute; */
 display: flex;
 width: 100%;
 height: 100%;
 left: 0px;
 top: 0px;
 justify-content: center;
-
 background: white;
 }
 
 .header {
   background-color: white;
-  height: 60px;
+  height: 70px;
   width: 100%;
   /* padding: 38px 0px; */
   display: flex;
   align-items: center;
   box-shadow: 0 4px 2px -2px #c5c6c7;
+  justify-content: center;
 }
 
 .logo-con {
@@ -38,9 +38,12 @@ background: white;
   max-width: 100%;
   height: auto;
   border-radius: 20px;
-  margin-left: 30%;
+  /* margin-left: 30%; */
+  /* margin-right: 190px; */
   border: solid 1px #231815;
 }
+
+
 
 .top {
 position: absolute;
@@ -48,9 +51,9 @@ display: flex;
 justify-content: center;
 align-content: center;
 align-items: center;
-width: 60%;
+width: 700px;
 height: 30%;
-top: 100px;
+top: 15%;
 border-radius: 8px;
 box-shadow: 5px 5px 5px 5px silver;
 background-color: white;
@@ -61,9 +64,9 @@ position: absolute;
 display: flex;
 justify-content: space-evenly;
 align-items: center;
-width: 60%;
-height: 40%;
-bottom: 15%;
+width: 800px;
+height: 250px ;
+top: 50% ;
 border-radius: 8px;
 /* box-shadow: 5px 5px 5px 5px silver; */
 background-color: white;
@@ -76,28 +79,31 @@ background-color: white;
     padding: 10px;
 } */
 
+
+.underleft {
+    background-color: white;
+    height: 100%;
+    padding: 10px;
+    font-size: 1.8em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+}
+
 .underright  {
   color: white;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.underleft {
-    background-color: white;
-    height: 100%;
-    padding: 10px;
-    font-size: 1.2em;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-
-
+  font-size: 1.5em ;
 }
 
 .boxrighttop {
+  width: 100%;
   height:10vh;
   background: #F25022;
   padding: 10px;
@@ -118,11 +124,22 @@ background-color: white;
   background: #00A4EF;
   padding: 8px;
   border-radius: 10px;
-  box-shadow: 5px 5px 20px 3px rgb(114, 161, 255);
+  box-shadow: 5px 5px 20px 3px silver;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
+  align-items: flex-start;
   
+}
+
+#detail {
+  /* background-color: #f3f3f3;  */
+  /* border-radius: 10px; */
+  /* position: absolute; */
+  margin-top: 5%;
+  padding: 12px 10px 10px 10px ;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 
@@ -131,7 +148,7 @@ background-color: white;
     /* align-items: center; */
     /* justify-content: center; */
     position: absolute;
-    top: 20px;
+    top: 8px;
     left: 20px;
   }
 
@@ -179,6 +196,15 @@ background-color: white;
     left: 20px;
   }
 
+  .info {
+    display: flex;
+    /* position: absolute; */
+    /* right: 10px; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
   .description {
     text-transform: capitalize;
     font-size: 1.8rem;
@@ -191,15 +217,6 @@ background-color: white;
     margin-bottom: 0.4em;
   }
   
-.info {
-    display: flex;
-    /* position: absolute; */
-    /* right: 10px; */
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
 .flex {
   display: flex;
   justify-content: space-evenly;
@@ -210,32 +227,28 @@ background-color: white;
 
 #sunrise { 
   background-color: #FFB900 ;
-  padding: 4px;
-  height: 40%;
-  border-radius: 30px;
+  width: 100%;
+  padding: 20px 6px;
+  height: 50%;
+  border-radius: 30px 30px 0px 0px;
   display: flex;
   align-items: center;
+  flex-direction: column;
   
 }
 
 #sunset {
   background-color: #231815 ;
-  padding: 4px;
-  height: 40%;
-  border-radius: 30px;
+  width: 100%;
+  padding: 20px 6px;
+  height: 50%;
+  border-radius: 0px 0px 30px 30px ;
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 
-#detail {
-  /* background-color: #f3f3f3;  */
-  /* border-radius: 10px; */
-  /* position: absolute; */
-  margin-top: 5%;
-  padding: 12px 10px 10px 10px ;
-  font-size: 1.2rem;
-  text-align: center;
-}
+
 
 .contain-icon {
   display: flex;
@@ -250,8 +263,12 @@ background-color: white;
   position: absolute;
   background-color: #f3f3f3;
   width: 100%;
-  height: 70px;
+  height: 50px;
   bottom: 0;
   box-shadow: 1px 1px 1px 4px#c5c6c7;
 
+}
+
+.underleft .iconimg {
+  max-width: 20%;
 }

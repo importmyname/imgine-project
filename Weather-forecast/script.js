@@ -39,8 +39,6 @@ let weather = {
         return c
     }
 
- 
-
       document.querySelector(".city").innerText = name;
       document.querySelector(".icon").src =
         "https://openweathermap.org/img/wn/" + icon + ".png";
@@ -62,8 +60,8 @@ let weather = {
         "sunset: " + sunset ;
       
       document.querySelector(".weather").classList.remove("loading");
-      document.body.style.backgroundImage =
-        "url('https://source.unsplash.com/1600x900/?" + name + "')";
+      // document.body.style.backgroundImage =
+      //   "url('https://source.unsplash.com/1600x900/?" + name + "')";
     },
     search: function () {
       this.fetchWeather(document.querySelector(".search-bar").value);

@@ -28,15 +28,15 @@ let weather = {
       const { country } = data.sys
     //   let a = new Date(sunrise);
     //   let sunr = a.toLocaleTimeString(country)
-      let sunr =() => {
-          let a = new Date() ;
+      const sunr =(sun) => {
+          let a = new Date(sun) ;
           let b = a.toLocaleTimeString(country);
-          return a
-      }
-      let suns =() => {
-        let c = new Date() ;
+          return b
+      } ;
+      const suns =(s) => {
+        let c = new Date(s) ;
         let d= c.toLocaleTimeString(country);
-        return c
+        return d
     }
 
       document.querySelector(".city").innerText = name;
@@ -55,9 +55,9 @@ let weather = {
         document.querySelector(".pressure").innerText = 
         "pressure: " + pressure + " hPa" ;
         document.querySelector(".sunrise").innerText = 
-        "sunrise: " + sunrise ;
+        "sunrise: " + sunr(sunrise)  ;
         document.querySelector(".sunset").innerText = 
-        "sunset: " + sunset ;
+        "sunset: " + sunr(sunset) ;
       
       document.querySelector(".weather").classList.remove("loading");
       // document.body.style.backgroundImage =
